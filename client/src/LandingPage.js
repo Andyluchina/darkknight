@@ -10,14 +10,8 @@ const useStyles = {
   button: {
     margin: 1
   },
-  input: {
-    display: "none"
-  },
   root: {
     flexGrow: 1
-  },
-  menuButton: {
-    marginRight: 1
   }
 };
 class LandingPage extends React.Component {
@@ -48,7 +42,6 @@ class LandingPage extends React.Component {
               color="primary"
               style={useStyles.button}
               onClick={event => {
-                console.log("redirecting to survey page");
                 this.props.history.push("/questions");
               }}
             >
