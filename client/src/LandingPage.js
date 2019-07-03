@@ -41,8 +41,10 @@ class LandingPage extends React.Component {
             </AppBar>
           </div>
           <header className="App-header">
+            <h3 style={{}}>黑马托福留学交流分享会</h3>
+
             <img src={logo} className="App-logo" alt="Dark Knight TOEFL" />
-            <p>From Ordinary to Extraordinary</p>
+            <p>从平凡到非凡</p>
             <Button
               variant="outlined"
               color="primary"
