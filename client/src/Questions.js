@@ -45,7 +45,7 @@ class Questions extends React.Component {
       return <div />;
     } else {
       return (
-        <FormControl component="fieldset">
+        <FormControl component="fieldset" style={{ marginTop: 7 }}>
           <FormLabel component="legend">留学意向国家</FormLabel>
           <RadioGroup
             aria-label="position"
@@ -164,7 +164,7 @@ class Questions extends React.Component {
             </Select>
           </FormControl>
           <br />
-          <FormControl component="fieldset">
+          <FormControl component="fieldset" style={{ marginTop: 7 }}>
             <FormLabel component="legend">有无留学意向</FormLabel>
             <RadioGroup
               aria-label="position"
@@ -192,7 +192,7 @@ class Questions extends React.Component {
           <br />
           {this.renderCountry()}
           <br />
-          <FormControl component="fieldset">
+          <FormControl component="fieldset" style={{ marginTop: 7 }}>
             <FormLabel component="legend">有没有接触过托福</FormLabel>
             <RadioGroup
               aria-label="position"
@@ -233,12 +233,13 @@ class Questions extends React.Component {
             onChange={event => {
               this.setState({ question: event.target.value });
             }}
+            style={{ marginTop: 7 }}
           />
           <br />
           <Button
             variant="outlined"
             color="primary"
-            style={{ marginTop: 5 }}
+            style={{ marginTop: 5, marginBottom: 100 }}
             onClick={async event => {
               console.log(this.state);
               this.setState({
