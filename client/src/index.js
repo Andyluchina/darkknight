@@ -7,15 +7,13 @@ import SuccessPage from "./SuccessPage";
 import { BrowserRouter, Route } from "react-router-dom";
 import { Switch } from "react-router";
 ReactDOM.render(
-  <div>
-    <BrowserRouter>
-      <Switch>
-        <Route path="/success_page" component={SuccessPage} />
-        <Route path="/questions" component={Questions} />
-        <Route path="/" component={LandingPage} />
-      </Switch>
-    </BrowserRouter>
-  </div>,
+  <BrowserRouter>
+    <Switch>
+      <Route path="/success_page" component={SuccessPage} />
+      <Route path="/questions" component={Questions} />
+      <Route path="/" component={LandingPage} />
+    </Switch>
+  </BrowserRouter>,
   document.getElementById("root")
 );
 
