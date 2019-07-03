@@ -1,12 +1,10 @@
 import React from "react";
 import logo from "./logo2.0.jpg";
 import "./App.css";
-import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = {
   button: {
