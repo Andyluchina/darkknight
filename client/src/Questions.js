@@ -38,7 +38,30 @@ class Questions extends React.Component {
     messages: []
   };
 
-  validateCode() {}
+  async validateCode() {
+    this.setState({
+      messages: []
+    });
+    var m = [];
+    if (this.state.name === "") {
+      m.push("请填写姓名");
+    }
+    if (this.state.phone === "") {
+      m.push("请填写电话或者微信号");
+    }
+    if (this.state.people === "") {
+      m.push("请填写参会人数");
+    }
+    if (this.state.grade === "") {
+      m.push("请填写年级");
+    }
+    if (this.state.abroad === "") {
+      m.push("请填写是否有留学意向");
+    }
+    this.setState({
+      messages: m
+    });
+  }
 
   renderCountry() {
     if (this.state.abroad === "无") {
@@ -236,18 +259,32 @@ class Questions extends React.Component {
             style={{ marginTop: 7 }}
           />
           <br />
+          {this.state.messages.map(m => {
+            return (
+              <div>
+                {m}
+                <br />
+              </div>
+            );
+          })}
           <Button
             variant="outlined"
             color="primary"
             style={{ marginTop: 5, marginBottom: 100 }}
             onClick={async event => {
-              console.log(this.state);
-              this.setState({
-                active: true
-              });
-              const res = await axios.post("/func/submit", this.state);
-              console.log(res);
-              this.props.history.push("/success_page", { res: res.data });
+              await this.validateCode();
+              console.log(this.state.messages.length);
+              if (this.state.messages.length === 0) {
+                console.log(this.state);
+                this.setState({
+                  active: true
+                });
+                const res = await axios.post("/func/submit", this.state);
+                console.log(res);
+                this.props.history.push("/success_page", { res: res.data });
+              } else {
+                return;
+              }
             }}
           >
             提交
