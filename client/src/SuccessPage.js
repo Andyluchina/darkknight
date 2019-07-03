@@ -8,13 +8,11 @@ class SuccessPage extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="Dark Knight TOEFL" />
-            <p>{this.props.location.state.res}</p>
-          </header>
-        </div>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="Dark Knight TOEFL" />
+          <p>{this.props.location.state.res}</p>
+        </header>
       </div>
     );
   }
