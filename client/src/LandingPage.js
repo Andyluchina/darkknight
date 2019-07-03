@@ -41,10 +41,10 @@ class LandingPage extends React.Component {
             </AppBar>
           </div>
           <header className="App-header">
-            <h3 style={{}}>黑马托福留学交流分享会</h3>
-
+            <h2 style={{}}>黑马托福留学交流分享会</h2>
             <img src={logo} className="App-logo" alt="Dark Knight TOEFL" />
-            <p>从平凡到非凡</p>
+            <p>从平凡，到非凡</p>
+            <br />
             <Button
               variant="outlined"
               color="primary"
@@ -54,7 +54,7 @@ class LandingPage extends React.Component {
                 this.props.history.push("/questions");
               }}
             >
-              立即报名
+              在这里开始
             </Button>
           </header>
         </div>
