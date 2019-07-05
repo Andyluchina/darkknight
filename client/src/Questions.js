@@ -27,7 +27,7 @@ class Questions extends React.Component {
   state = {
     name: "",
     phone: "",
-    people: 1,
+    people: "",
     grade: "",
     abroad: "",
     country: "",
