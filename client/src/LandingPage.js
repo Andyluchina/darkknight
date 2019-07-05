@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo2.0.jpg";
+//import logo from "./logo2.0.jpg";
 import "./App.css";
 import Button from "@material-ui/core/Button";
 import AppBar from "@material-ui/core/AppBar";
@@ -34,7 +34,11 @@ class LandingPage extends React.Component {
           </div>
           <header className="App-header">
             <h2 style={{}}>黑马托福留学交流分享会</h2>
-            <img src={logo} className="App-logo" alt="Dark Knight TOEFL" />
+            <img
+              src="logo2.0.jpg"
+              className="App-logo"
+              alt="Dark Knight TOEFL"
+            />
             <p>从平凡，到非凡</p>
             <br />
             <Button
